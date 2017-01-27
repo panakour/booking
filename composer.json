@@ -1,0 +1,21 @@
+{
+    "name": "panakour/booking",
+    "description": "Help people to work with booking affiliate",
+    "require": {
+        "illuminate/support": "^5.4",
+        "illuminate/console": "^5.4",
+        "illuminate/pagination": "^5.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Panagiots Koursaris",
+            "email": "panakourweb@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Panakour\\Booking\\": "src/"
+        }
+    }
+}
