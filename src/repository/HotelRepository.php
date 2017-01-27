@@ -14,6 +14,11 @@ class HotelRepository
 
     public function paginated($page, $length)
     {
+                //this sort help to get first the hotel with more class
+        usort($this->hotels, function($a, $b) {
+            return $a['class'] < $b['class'];
+        });
+
         $offset = ($length * $page) - $length;
         $partOfHotels = array_slice($this->hotels, $offset, $length);
         $paginatedItems = new LengthAwarePaginator($partOfHotels, count($this->hotels), $length);
